@@ -33,23 +33,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         final Button newGameButton=(Button) findViewById(R.id.button);
-
+       final EditText user=(EditText) findViewById(R.id.userNum);
 
         newGameButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                EditText user=(EditText) findViewById(R.id.userNum);
 
                 String value=user.getText().toString();
-                int userGuess= Integer.parseInt(value);
 
-//                if(value!=null && value.isEmpty()){
-//                    Toast.makeText(MainActivity.this, "Enter Value", Toast.LENGTH_SHORT).show();
-//
-//                }
+
+
+                if(value.isEmpty()){
+                   user.setError("Error");
+                }
+
                 userGuessCount++;
                     try {
+                        int userGuess= Integer.parseInt(value);
                         if (userGuess == theNumber && userGuessCount>=5) {
 
                             Toast.makeText(getApplicationContext(), "Superior WiN", Toast.LENGTH_SHORT).show();
