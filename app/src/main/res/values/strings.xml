@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">hi-low</string>
+    <string name="hintforedittext">Enter Your Guess</string>
+    <string name="playbuttontext">Play</string>
+    <string name="about">Jay Patel</string>
+    <string name="author">Jay</string>
+
+</resources>
