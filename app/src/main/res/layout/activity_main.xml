@@ -46,7 +46,10 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/duke"
         android:id="@+id/imageView"
-        android:layout_above="@+id/userNum"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/counts"
+        android:layout_alignEnd="@+id/userNum"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="96dp" />
 
 </RelativeLayout>
