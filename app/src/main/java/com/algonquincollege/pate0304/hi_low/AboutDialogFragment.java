@@ -2,22 +2,21 @@ package com.algonquincollege.pate0304.hi_low;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.app.DialogFragment;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatDialogFragment;
 
 /**
- * Created by shiva on 2016-10-02.
+ * Created by shiva on 2016-10-11.
  */
 
-public class AboutDialogFragment extends AppCompatDialogFragment {
-
+public class AboutDialogFragment extends DialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         // Use the Builder class for convenient dialog construction
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         //TODO pro-tip: cascading messages
-        builder.setTitle(R.string.about)
+        builder.setTitle(R.string.action_about)
                 //TODO replace with your name + userID
                 .setMessage(R.string.author)
                 .setCancelable(false)

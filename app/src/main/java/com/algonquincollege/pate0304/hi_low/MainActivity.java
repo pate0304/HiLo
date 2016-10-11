@@ -18,11 +18,10 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     int theNumber= new Random().nextInt(1000);
 
-    private static final String About_Dialog;
 
-    static {
-        About_Dialog = "About Dialog";
-    }
+    private static final String ABOUT_DIALOG_TAG = "About";
+
+
 
     int userGuessCount=0;
 
@@ -105,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.about, menu);
+        getMenuInflater().inflate(R.menu.main_menu, menu);
         return true;
     }
 
@@ -117,9 +116,9 @@ public class MainActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        if (id == R.id.about) {
-            //DialogFragment newFragment = new AboutDialogFragment();
-            //newFragment.show(getFragmentManager(), About_Dialog);
+        if (id == R.id.action_about) {
+            DialogFragment newFragment = new AboutDialogFragment();
+            newFragment.show(getFragmentManager(), ABOUT_DIALOG_TAG);
             return true;
         }
 
